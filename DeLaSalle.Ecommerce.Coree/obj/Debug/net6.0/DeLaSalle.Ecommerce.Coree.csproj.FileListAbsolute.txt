@@ -1,0 +1,12 @@
+C:\Users\Jair Ramirez\Documents\Maestria\TWN\DeLaSalle.Ecommerce\DeLaSalle.Ecommerce.Coree\bin\Debug\net6.0\DeLaSalle.Ecommerce.Coree.deps.json
+C:\Users\Jair Ramirez\Documents\Maestria\TWN\DeLaSalle.Ecommerce\DeLaSalle.Ecommerce.Coree\bin\Debug\net6.0\DeLaSalle.Ecommerce.Coree.dll
+C:\Users\Jair Ramirez\Documents\Maestria\TWN\DeLaSalle.Ecommerce\DeLaSalle.Ecommerce.Coree\bin\Debug\net6.0\DeLaSalle.Ecommerce.Coree.pdb
+C:\Users\Jair Ramirez\Documents\Maestria\TWN\DeLaSalle.Ecommerce\DeLaSalle.Ecommerce.Coree\obj\Debug\net6.0\DeLaSalle.Ecommerce.Coree.csproj.AssemblyReference.cache
+C:\Users\Jair Ramirez\Documents\Maestria\TWN\DeLaSalle.Ecommerce\DeLaSalle.Ecommerce.Coree\obj\Debug\net6.0\DeLaSalle.Ecommerce.Coree.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jair Ramirez\Documents\Maestria\TWN\DeLaSalle.Ecommerce\DeLaSalle.Ecommerce.Coree\obj\Debug\net6.0\DeLaSalle.Ecommerce.Coree.AssemblyInfoInputs.cache
+C:\Users\Jair Ramirez\Documents\Maestria\TWN\DeLaSalle.Ecommerce\DeLaSalle.Ecommerce.Coree\obj\Debug\net6.0\DeLaSalle.Ecommerce.Coree.AssemblyInfo.cs
+C:\Users\Jair Ramirez\Documents\Maestria\TWN\DeLaSalle.Ecommerce\DeLaSalle.Ecommerce.Coree\obj\Debug\net6.0\DeLaSalle.Ecommerce.Coree.csproj.CoreCompileInputs.cache
+C:\Users\Jair Ramirez\Documents\Maestria\TWN\DeLaSalle.Ecommerce\DeLaSalle.Ecommerce.Coree\obj\Debug\net6.0\DeLaSalle.Ecommerce.Coree.dll
+C:\Users\Jair Ramirez\Documents\Maestria\TWN\DeLaSalle.Ecommerce\DeLaSalle.Ecommerce.Coree\obj\Debug\net6.0\refint\DeLaSalle.Ecommerce.Coree.dll
+C:\Users\Jair Ramirez\Documents\Maestria\TWN\DeLaSalle.Ecommerce\DeLaSalle.Ecommerce.Coree\obj\Debug\net6.0\DeLaSalle.Ecommerce.Coree.pdb
+C:\Users\Jair Ramirez\Documents\Maestria\TWN\DeLaSalle.Ecommerce\DeLaSalle.Ecommerce.Coree\obj\Debug\net6.0\ref\DeLaSalle.Ecommerce.Coree.dll

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "xVwk7HvaOJ9rjKELXHwSqCNs3a/UbumRzg5fdRTH8RPTFEoZBilOUAiuVYQtwlB/w/hdNsksXRKwjDIc36aC2Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Jair Ramirez\\Documents\\Maestria\\TWN\\DeLaSalle.Ecommerce\\DeLaSalle.Eccommerce.WebSite\\DeLaSalle.Eccommerce.WebSite.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jair Ramirez\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

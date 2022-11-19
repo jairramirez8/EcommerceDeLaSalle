@@ -1,0 +1,6 @@
+C:\Users\Jair Ramirez\Documents\Maestria\TWN\DeLaSalle.Ecommerce\DeLaSalle.Ecommerce.Core\bin\Debug\DeLaSalle.Ecommerce.Core.dll
+C:\Users\Jair Ramirez\Documents\Maestria\TWN\DeLaSalle.Ecommerce\DeLaSalle.Ecommerce.Core\bin\Debug\DeLaSalle.Ecommerce.Core.pdb
+C:\Users\Jair Ramirez\Documents\Maestria\TWN\DeLaSalle.Ecommerce\DeLaSalle.Ecommerce.Core\obj\Debug\DeLaSalle.Ecommerce.Core.csproj.AssemblyReference.cache
+C:\Users\Jair Ramirez\Documents\Maestria\TWN\DeLaSalle.Ecommerce\DeLaSalle.Ecommerce.Core\obj\Debug\DeLaSalle.Ecommerce.Core.csproj.CoreCompileInputs.cache
+C:\Users\Jair Ramirez\Documents\Maestria\TWN\DeLaSalle.Ecommerce\DeLaSalle.Ecommerce.Core\obj\Debug\DeLaSalle.Ecommerce.Core.dll
+C:\Users\Jair Ramirez\Documents\Maestria\TWN\DeLaSalle.Ecommerce\DeLaSalle.Ecommerce.Core\obj\Debug\DeLaSalle.Ecommerce.Core.pdb
