@@ -37,6 +37,7 @@ public class BrandController : ControllerBase
         response.Data = brand;
         return Created($"/api/[controller]/{response.Data.Id}", response);
     }
+    //Termine practica 3
  //test
     [HttpGet]
     [Route("{id:int}")]
