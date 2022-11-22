@@ -30,9 +30,7 @@ public class ProductCategoryRepository: IProductCategoryRepository
     public async Task<List<ProductCategory>> GetAllAsync()
     {
         const string sql = "SELECT * FROM ProductCategory WHERE IsDeleted = 0";
-
         var categories = await _dbContext.Connection.QueryAsync<ProductCategory>(sql);
-
         return categories.ToList();
     }
 
@@ -56,4 +54,14 @@ public class ProductCategoryRepository: IProductCategoryRepository
         return category.IsDeleted == true ? null : category;
         
     }
+
+    public async Task<ProductCategory> GetByName(string name, int id = 0)
+    {
+        string sql = $"SELECT * FROM ProductCategory WHERE Name = '{name}' AND id <> {id}";
+        var categories = await _dbContext.Connection.QueryAsync<ProductCategory>(sql);
+
+        return categories.ToList().FirstOrDefault();
+    }
+
+    
 }

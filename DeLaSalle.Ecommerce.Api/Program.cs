@@ -19,6 +19,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IProductCategoryRepository,ProductCategoryRepository>();
 builder.Services.AddScoped<IBrandRepository,BrandRepository>();
 builder.Services.AddScoped<IProductCategoryService, ProductCategoryService>();
+builder.Services.AddScoped<IBrandService, BrandService>();
 builder.Services.AddScoped<IDbContext, DbContext>();
 
 SqlMapperExtensions.TableNameMapper = entityType =>

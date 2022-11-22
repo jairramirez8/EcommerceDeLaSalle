@@ -48,4 +48,11 @@ public class InMemoryProductCategoryRepository: IProductCategoryRepository
 
         return await Task.FromResult(category);
     }
+
+    public Task<ProductCategory> GetByName(string name, int id = 0)
+    {
+        throw new NotImplementedException();
+    }
+
+    
 }

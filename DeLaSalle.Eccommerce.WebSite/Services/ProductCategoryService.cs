@@ -16,7 +16,6 @@ public class ProductCategoryService : IProductCategoryService
         
     }
     
-    
     public async Task<Response<List<ProductCategoryDto>>> GetAllAsync()
     {
         var url = $"{_baseURL}{_endpoint}";

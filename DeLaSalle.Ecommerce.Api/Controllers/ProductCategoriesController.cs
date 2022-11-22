@@ -39,10 +39,15 @@ public class ProductCategoriesController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Response<ProductCategoryDto>>> Post([FromBody] ProductCategoryDto categoryDto)
     {
-        var response = new Response<ProductCategoryDto>
+        var response = new Response<ProductCategoryDto>();
+        
+        if(await  _productCategoryService.ExistByName(categoryDto.Name))
         {
-            Data = await _productCategoryService.SaveAsync(categoryDto)
+            response.Errors.Add($"Product Category name {categoryDto.Name} already exists");
+            return BadRequest(response);
         };
+
+        response.Data = await _productCategoryService.SaveAsync(categoryDto);
 
         return Created($"/api/[controller]/{response.Data.Id}", response);
 
@@ -77,6 +82,12 @@ public class ProductCategoriesController : ControllerBase
         {
             response.Errors.Add("Product Category Not Found");
             return NotFound(response);
+        }
+
+        if (await _productCategoryService.ExistByName(categoryDto.Name, categoryDto.Id))
+        {
+            response.Errors.Add($"Product Cetegory Name {categoryDto.Name} already exists");
+            return BadRequest(response);
         }
 
         response.Data = await _productCategoryService.UpdateAsync(categoryDto);

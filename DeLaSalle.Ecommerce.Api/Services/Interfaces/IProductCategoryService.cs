@@ -15,4 +15,6 @@ public interface IProductCategoryService
     Task<bool> DeleteAsync(int id);
     
     Task<ProductCategoryDto> GetById(int id);
+
+    Task<bool> ExistByName(string name, int id =0);
 }

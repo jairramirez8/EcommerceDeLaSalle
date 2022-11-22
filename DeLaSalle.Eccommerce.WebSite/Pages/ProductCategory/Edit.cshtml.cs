@@ -8,6 +8,7 @@ namespace DeLaSalle.Eccommerce.WebSite.Pages.ProductCategory;
 public class Edit : PageModel
 {
     [BindProperty] public ProductCategoryDto ProductCategoryDto { get; set; }
+    public List<string> Errors { get; set; } = new List<string>();
 
     private readonly IProductCategoryService _service;
     
