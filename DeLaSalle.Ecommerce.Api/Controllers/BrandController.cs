@@ -44,7 +44,8 @@ public class BrandController : ControllerBase
         
         return Created($"/api/[controller]/{response.Data.Id}", response);
     }
- //test
+ //tes
+ //Termine practica 4
     [HttpGet]
     [Route("{id:int}")]
     public async Task<ActionResult<Response<BrandDto>>> GetById(int id)
