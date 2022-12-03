@@ -36,16 +36,19 @@ public class BrandController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Response<Brand>>> Post([FromBody] BrandDto brandDto)
     {
-        var response = new Response<BrandDto>
+        var response = new Response<BrandDto>();
+        
+        if(await  _brandService.ExistByName(brandDto.Name))
         {
-            Data = await _brandService.SaveAsync(brandDto)
+            response.Errors.Add($"Brand name {brandDto.Name} already exists");
+            return BadRequest(response);
         };
-        
-        
+
+        response.Data = await _brandService.SaveAsync(brandDto);
+
         return Created($"/api/[controller]/{response.Data.Id}", response);
     }
- //tes
- //Termine practica 4
+
     [HttpGet]
     [Route("{id:int}")]
     public async Task<ActionResult<Response<BrandDto>>> GetById(int id)
@@ -74,6 +77,12 @@ public class BrandController : ControllerBase
             return NotFound(response);
         }
 
+        if (await _brandService.ExistByName(brandDto.Name, brandDto.Id))
+        {
+            response.Errors.Add($"Brand Name {brandDto.Name} already exists");
+            return BadRequest(response);
+        }
+
         response.Data = await _brandService.UpdateAsync(brandDto);
 
         return Ok(response);
@@ -81,9 +90,12 @@ public class BrandController : ControllerBase
 
     [HttpDelete]
     [Route("{id:int}")]
-    public async Task<bool> DeleteAsync(int id)
+    public async Task<ActionResult<Response<bool>>>DeleteAsync(int id)
     {
-        return await _brandService.DeleteAsync(id);
+        var response = new Response<bool>();
+        response.Data = await _brandService.DeleteAsync(id);
+
+        return Ok(response);
     }
  
 }

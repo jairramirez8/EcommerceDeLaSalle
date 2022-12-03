@@ -57,11 +57,10 @@ public class ProductCategoryRepository: IProductCategoryRepository
 
     public async Task<ProductCategory> GetByName(string name, int id = 0)
     {
-        string sql = $"SELECT * FROM ProductCategory WHERE Name = '{name}' AND id <> {id}";
+        var sql = $"SELECT * FROM ProductCategory WHERE IsDeleted = 0 AND Name = '{name}' AND Id <> {id}";
         var categories = await _dbContext.Connection.QueryAsync<ProductCategory>(sql);
 
         return categories.ToList().FirstOrDefault();
     }
 
-    
 }

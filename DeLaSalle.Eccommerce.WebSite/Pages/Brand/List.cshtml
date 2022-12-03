@@ -1,5 +1,5 @@
 @page
-@model DeLaSalle.Eccommerce.WebSite.Pages.ProductCategory.ListModel
+@model DeLaSalle.Eccommerce.WebSite.Pages.Brand.ListModel
 
 <div class="container-fluid">
     <form method="get">
@@ -24,15 +24,15 @@
                     <th>Description</th>
                     <th></th>
                 </tr>
-                @foreach (var category in @Model.ProductCategories)
+                @foreach (var brand in @Model.Brands)
                 {
                     <tr>
-                        <td>@category.Name</td>
-                        <td>@category.Description</td>
+                        <td>@brand.Name</td>
+                        <td>@brand.Description</td>
                         <td>
-                            <a asp-page="/ProductCategory/Edit" asp-route-id="@category.Id"
+                            <a asp-page="/Brand/Edit" asp-route-id="@brand.Id"
                                class="btn btn-primary" role="button">Edit</a>
-                            <a asp-page="/ProductCategory/Delete" asp-route-id="@category.Id"
+                            <a asp-page="/Brand/Delete" asp-route-id="@brand.Id"
                                 class="btn btn-danger" role="button">Delete</a>
                         </td>
                             

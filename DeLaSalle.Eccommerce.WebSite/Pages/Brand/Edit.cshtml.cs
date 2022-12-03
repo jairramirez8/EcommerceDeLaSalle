@@ -4,39 +4,39 @@ using DeLaSalle.Ecommerce.Coree.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace DeLaSalle.Eccommerce.WebSite.Pages.ProductCategory;
+namespace DeLaSalle.Eccommerce.WebSite.Pages.Brand;
 
 public class Edit : PageModel
 {
-    [BindProperty] public ProductCategoryDto ProductCategory { get; set; }
+    [BindProperty] public BrandDto Brand { get; set; }
     public List<string> Errors { get; set; } = new List<string>();
 
-    private readonly IProductCategoryService _service;
+    private readonly IBrandService _service;
     
-    public Edit(IProductCategoryService service)
+    public Edit(IBrandService service)
     {
         _service = service;
     }
-
+    
     public async Task<IActionResult> OnGet(int? id)
     {
-        ProductCategory = new ProductCategoryDto();
+        Brand = new BrandDto();
         
         if (id.HasValue)
         {
             //Obtener informacion del servicio (API)
             var response = await _service.GetById(id.Value);
-            ProductCategory = response.Data;
+            Brand = response.Data;
         }
 
-        if (ProductCategory == null)
+        if (Brand == null)
         {
             return RedirectToPage("/Error");
         }
 
         return Page();
     }
-
+    
     public async Task<IActionResult> OnPostAsync()
     {
         if (!ModelState.IsValid)
@@ -44,18 +44,18 @@ public class Edit : PageModel
             return Page();
         }
 
-        Response<ProductCategoryDto> response;
+        Response<BrandDto> response;
         
-        if (ProductCategory.Id > 0)
+        if (Brand.Id > 0)
         {
             //Actualizar
-            response = await _service.UpdateAsync(ProductCategory);
+            response = await _service.UpdateAsync(Brand);
 
         }
         else
         {
             //Insertar
-            response = await _service.SaveAsync(ProductCategory);
+            response = await _service.SaveAsync(Brand);
             
         }
 
@@ -66,7 +66,7 @@ public class Edit : PageModel
             return Page();
         }
 
-        ProductCategory = response.Data;
+        Brand = response.Data;
         return RedirectToPage("./List");
         
     }

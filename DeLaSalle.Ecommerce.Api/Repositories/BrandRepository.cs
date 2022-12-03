@@ -41,6 +41,14 @@ public class BrandRepository : IBrandRepository
         return brand.IsDeleted == true ? null : brand;
     }
 
+    public async Task<Brand> GetByName(string name, int id = 0)
+    {
+        var sql = $"SELECT * FROM Brand WHERE IsDeleted = 0 AND Name = '{name}' AND Id <> {id}";
+        var brands = await _dbContext.Connection.QueryAsync<Brand>(sql);
+
+        return brands.ToList().FirstOrDefault();
+    }
+
     public async Task<bool> DeleteAsync(int id)
     {
         var brand = await GetById(id);
